@@ -96,7 +96,6 @@ func main() {
 
 	for _, length := range []int{10, 100, 1000, 1000000} {
 		list := randomRange(length)
-		TreeSort(list)
 		start := time.Now()
 		TreeSort(list)
 		elapsed := time.Since(start).Seconds()
