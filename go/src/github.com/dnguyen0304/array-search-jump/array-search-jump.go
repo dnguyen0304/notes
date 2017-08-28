@@ -103,18 +103,15 @@ func traverse(node *Node) []*Node {
 }
 
 // BlockSearch searches the list for the specified value in blocks. If the
-// value is found, it returns the index. If the value is not found, it returns
-// -1. The time complexity is O(n^(1/2)), where n is the length of the array.
+// value is found, it returns the index of the first match. If the value is
+// not found, it returns -1. The time complexity is O(n^(1/2)), where n is
+// the length of the array.
 func BlockSearch(list []int, other int) int {
 	interval := int(math.Sqrt(float64(len(list))))
 
-	// Base Case #1
+	// Base Case
 	if len(list) == 0 {
 		return -1
-	}
-	// Base Case #2
-	if len(list) <= interval {
-		return LinearSearch(list, other)
 	}
 	// Iterative Case
 	for start, end, current := 0, interval, 0; ; start, end = start + interval, end + interval {
@@ -130,8 +127,8 @@ func BlockSearch(list []int, other int) int {
 }
 
 // LinearSearch searches the list for the specified value. If the value is
-// found, it returns the index. Otherwise, it returns -1. The time complexity
-// is O(n), where n is the length of the array.
+// found, it returns the index of the first match. Otherwise, it returns -1.
+// The time complexity is O(n), where n is the length of the array.
 func LinearSearch(list []int, other int) int {
 	for i, data := range list {
 		if data == other {
