@@ -23,8 +23,8 @@ type Node struct {
 	// The fields must be defined as pointers to avoid an invalid recursive
 	// type error. This works because the compiler can now calculate the size
 	// of pointers.
-	data string
-	left *Node
+	data  string
+	left  *Node
 	right *Node
 }
 
