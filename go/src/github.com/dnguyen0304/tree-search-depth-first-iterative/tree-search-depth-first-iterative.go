@@ -43,8 +43,8 @@ func (stack *ArrayStack) Pop() (*Node, error) {
 	if len(stack.array) == 0 {
 		return nil, ErrEmptyStack
 	}
-	node := stack.array[len(stack.array) - 1]
-	stack.array = stack.array[:len(stack.array) - 1]
+	node := stack.array[len(stack.array)-1]
+	stack.array = stack.array[:len(stack.array)-1]
 	return node, nil
 }
 
@@ -53,14 +53,14 @@ type Node struct {
 	// The fields must be defined as pointers to avoid an invalid recursive
 	// type error. This works because the compiler can calculate the size of
 	// pointers.
-	data string
-	left *Node
+	data  string
+	left  *Node
 	right *Node
 }
 
 func NewTree() *Node {
 	//   A
-    //  / \
+	//  / \
 	// B   C
 	//    / \
 	//   D   F
