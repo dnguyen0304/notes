@@ -34,7 +34,7 @@ func Reverse(list []int) {
 		return
 	}
 	// Iterative Case
-	for left, right := 0, len(list) - 1; left < right; left, right = left + 1, right - 1 {
+	for left, right := 0, len(list)-1; left < right; left, right = left+1, right-1 {
 		list[left], list[right] = list[right], list[left]
 	}
 }
@@ -51,11 +51,12 @@ func main() {
 		start := time.Now()
 		Reverse(list)
 		elapsed := time.Since(start).Seconds()
-        // Width assigns a fixed width whereas precision determines at least
-        // how many digits are displayed after the decimal point. The latter
-        // may pad zeroes to whole numbers.
-		fmt.Printf("When n is equal to %7d, the operation takes %.9f seconds.\n",
-				   length,
-				   elapsed)
+		// Width assigns a fixed width whereas precision determines at least
+		// how many digits are displayed after the decimal point. The latter
+		// may pad zeroes to whole numbers.
+		fmt.Printf(
+			"When n is equal to %7d, the operation takes %.9f seconds.\n",
+			length,
+			elapsed)
 	}
 }
