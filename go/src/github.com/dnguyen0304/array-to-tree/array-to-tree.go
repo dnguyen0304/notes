@@ -88,9 +88,9 @@ func NewArrayQueue() *ArrayQueue {
 // type" error. This works because the compiler can now calculate the size of
 // pointers
 type Node struct {
-	data	int
-	left	*Node
-	right	*Node
+	data  int
+	left  *Node
+	right *Node
 }
 
 // LeftAdd adds a node to the binary tree as the left child.
