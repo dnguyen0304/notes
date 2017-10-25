@@ -45,7 +45,7 @@ type Node struct {
 //
 // Its operations are not thread-safe.
 type iterator struct {
-	head *Node
+	head    *Node
 	current *Node
 }
 
@@ -97,8 +97,8 @@ func (list *LinkedList) Add(data int) {
 	// Case: 0 or 1-node linked list
 	if list.tail == nil {
 		list.tail = next
-	// Case: 2 or more node linked list
 	} else {
+		// Case: 2 or more node linked list
 		list.tail.next = next
 		list.tail = list.tail.next
 	}
@@ -149,7 +149,7 @@ func FindMidpoint(list *LinkedList) *Node {
 			midpoint = current
 		}
 		// Case: even number of nodes
-		if size % 2 == 0 {
+		if size%2 == 0 {
 			midpoint = midpoint.next
 		}
 	}
