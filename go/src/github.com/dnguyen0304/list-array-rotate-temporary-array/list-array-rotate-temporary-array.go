@@ -69,7 +69,7 @@ func main() {
 	rand.Seed(seconds)
 
 	// Rhodes' "Thousand-Million" Thought Experiment
-	for _, n := range []int{10, 100, 1000, 1000000} {
+	for _, n := range []int{10, 1000, 1000000, 10000000} {
 		list := NewRange(n)
 		factor := rand.Intn(n)
 		start := time.Now()
