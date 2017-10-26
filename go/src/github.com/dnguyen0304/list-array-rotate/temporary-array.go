@@ -1,5 +1,8 @@
 // package main implements a rotation algorithm for array data structures.
 //
+// Using a temporary array is approximately 100 times faster than reversing
+// in-place.
+//
 // # Should the array be rotated to the left or to the right? Would it be
 //   acceptable if I use left rotation?
 // # Should the array be rotated in-place?
