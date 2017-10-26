@@ -82,7 +82,7 @@ func main() {
 		// how many digits are displayed after the decimal point. The latter
 		// may pad zeroes to whole numbers.
 		fmt.Printf(
-			"When n is equal to %7d, the operation takes %.9f seconds.\n",
+			"When n is equal to %8d, the operation takes %.9f seconds.\n",
 			length,
 			elapsed)
 	}
